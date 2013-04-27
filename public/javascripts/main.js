@@ -22,7 +22,7 @@ $(function() {
         var $this, $right, $left, $others;
 
         if (window.location.hash && window.location.hash !== '#') {
-            $('.row-fluid').removeClass('go')
+            $('#row-fluid').removeClass('go')
             $('.subwindow').removeClass('right1 right2 right3 left1 left2 left3');
             window.location.hash = '';
             e.preventDefault();
@@ -31,7 +31,7 @@ $(function() {
             $left = $subwindows.not($right).not(this);
             $left.addClass('left' + $left.length);
             $right.addClass('right' + $right.length);
-            $('.row-fluid').addClass('go');
+            $('#row-fluid').addClass('go');
         }
     } );
 });

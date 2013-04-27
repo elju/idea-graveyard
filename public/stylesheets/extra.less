@@ -3,7 +3,7 @@ body{height:100%;overflow:hidden;}
 
 .container {height:100%;}
 
-.row-fluid {
+#row-fluid {
     position: relative;
     width: 160%;
     left: -30%;
@@ -19,43 +19,6 @@ body{height:100%;overflow:hidden;}
         height: 100%;
         width: 25%;
         float: left;
-    }
-    > .subwindow {
-        display: block;
-        overflow: hidden;
-        /* -ms-transform: skewX(-45deg);
-        -webkit-transform: skewX(-45deg);
-        transform: skewX(-45deg); */
-        -webkit-transition: width 2s, left 2s, right 2s;
-        -o-transition: width 2s, left 2s, right 2s;
-        -moz-transition: width 2s, left 2s, right 2s;
-        transition: width 2s, left 2s, right 2s;
-
-        > * {
-            -ms-transform: skewX(45deg);
-            -webkit-transform: skewX(45deg);
-            transform: skewX(45deg);
-        }
-
-        > .masking-layer {
-            width: 250%;
-            height: 100%;
-            -webkit-transition: width 2s, left 2s, right 2s, -webkit-transform 2s, margin-right 2s, margin-left 2s;
-            -o-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
-            -moz-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
-            transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
-        }
-
-        .subcontainer {
-            overflow: hidden;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            -webkit-transition: width 2s, left 2s, right 2s, -webkit-transform 2s, margin-right 2s, margin-left 2s;
-            -o-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
-            -moz-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
-            transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
-        }
     }
 
     #one .subcontainer {
@@ -101,12 +64,6 @@ body{height:100%;overflow:hidden;}
         // -ms-transform: skewX(0deg);
         // -webkit-transform: skewX(0deg);
         // transform: skewX(0deg);
-
-        .masking-layer {
-            -ms-transform: skewX(0deg);
-            transform: skewX(0deg);
-            -webkit-transform: skewX(0deg);
-        }
 
     }
 
@@ -190,10 +147,26 @@ body{height:100%;overflow:hidden;}
     }
 }
 
-.row-fluid.go {
-    -ms-transform: skewX(0deg);
-    -webkit-transform: skewX(0deg);
-    transform: skewX(0deg);
+#row-fluid {
+    &.go {
+        -ms-transform: skewX(0deg);
+        -webkit-transform: skewX(0deg);
+        transform: skewX(0deg);
+    }
+
+    &.go .masking-layer{
+        -ms-transform: skewX(0deg);
+        transform: skewX(0deg);
+        -webkit-transform: skewX(0deg);
+    }
+
+    &.go > #one .subcontainer {
+        margin-left: 0;
+    }
+
+    &.go > #two .subcontainer {
+        margin-left: -500%;
+    }
 }
 
 
@@ -242,3 +215,47 @@ body{height:100%;overflow:hidden;}
         }
     }
 }
+
+.subwindow {
+    display: block;
+    overflow: hidden;
+    /* -ms-transform: skewX(-45deg);
+    -webkit-transform: skewX(-45deg);
+    transform: skewX(-45deg); */
+    -webkit-transition: width 2s, left 2s, right 2s;
+    -o-transition: width 2s, left 2s, right 2s;
+    -moz-transition: width 2s, left 2s, right 2s;
+    transition: width 2s, left 2s, right 2s;
+
+    > * {
+        -ms-transform: skewX(45deg);
+        -webkit-transform: skewX(45deg);
+        transform: skewX(45deg);
+    }
+
+    > .masking-layer {
+        width: 250%;
+        height: 100%;
+        -webkit-transition: -webkit-transform 2s;
+        -o-transition: transform 2s;
+        -moz-transition: transform 2s;
+        transition: transform 2s;
+    }
+
+    .subcontainer {
+        overflow: hidden;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        -webkit-transition: margin-left 1.5s;
+        -o-transition: margin-left 1s;
+        -moz-transition: margin-left 1s;
+        transition: margin-left 1s;
+    }
+    
+    img {
+        margin: 75px;
+    }
+}
+
+
