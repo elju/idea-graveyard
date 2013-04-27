@@ -52,10 +52,35 @@ body {
   -webkit-transform: skewX(45deg);
   transform: skewX(45deg);
 }
+.row-fluid > .subwindow > .masking-layer {
+  width: 250%;
+  height: 100%;
+  -webkit-transition: width 2s, left 2s, right 2s, -webkit-transform 2s, margin-right 2s, margin-left 2s;
+  -o-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+  -moz-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+  transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+}
 .row-fluid > .subwindow .subcontainer {
   overflow: hidden;
   position: absolute;
-  width: 250%;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: width 2s, left 2s, right 2s, -webkit-transform 2s, margin-right 2s, margin-left 2s;
+  -o-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+  -moz-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+  transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+}
+.row-fluid #one .subcontainer {
+  margin-left: 30%;
+}
+.row-fluid #two .subcontainer {
+  margin-left: -10%;
+}
+.row-fluid #three .subcontainer {
+  margin-left: -50%;
+}
+.row-fluid #four .subcontainer {
+  margin-left: -90%;
 }
 .row-fluid > .subwindow#one {
   -webkit-transition: width 2s, left 2s, right 2s, margin-left 2s;
@@ -71,13 +96,18 @@ body {
   transition: width 2s, left 2s, right 2s, margin-right 2s;
   margin-right: 0%;
 }
-.row-fluid > .subwindow.selected {
-  width: 62.5%;
-}
-.row-fluid > .subwindow.selected#one:target {
+.row-fluid > .subwindow#one:target {
   margin-left: 18.75%;
 }
-.row-fluid > .subwindow.selected#four:target {
+.row-fluid > .subwindow:target {
+  width: 62.5%;
+}
+.row-fluid > .subwindow:target .masking-layer {
+  -ms-transform: skewX(0deg);
+  transform: skewX(0deg);
+  -webkit-transform: skewX(0deg);
+}
+.row-fluid > .subwindow#four:target {
   margin-right: 18.75%;
 }
 .row-fluid > .subwindow.right1,

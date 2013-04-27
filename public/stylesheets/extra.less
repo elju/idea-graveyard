@@ -37,12 +37,44 @@ body{height:100%;overflow:hidden;}
             transform: skewX(45deg);
         }
 
+        > .masking-layer {
+            width: 250%;
+            height: 100%;
+            -webkit-transition: width 2s, left 2s, right 2s, -webkit-transform 2s, margin-right 2s, margin-left 2s;
+            -o-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+            -moz-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+            transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+        }
+
         .subcontainer {
             overflow: hidden;
             position: absolute;
-            width: (100% / (1.6 * .25))
+            height: 100%;
+            width: 100%;
+            -webkit-transition: width 2s, left 2s, right 2s, -webkit-transform 2s, margin-right 2s, margin-left 2s;
+            -o-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+            -moz-transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
+            transition: width 2s, left 2s, right 2s, transform 2s, margin-right 2s, margin-left 2s;
         }
     }
+
+    #one .subcontainer {
+        margin-left: 30%;
+    }
+
+    #two .subcontainer {
+        margin-left: -10%;
+    }
+
+    #three .subcontainer {
+        margin-left: -50%;
+    }
+
+    #four .subcontainer {
+        margin-left: -90%;
+    }
+
+
 
     > .subwindow#one {
         -webkit-transition: width 2s, left 2s, right 2s, margin-left 2s;
@@ -60,15 +92,25 @@ body{height:100%;overflow:hidden;}
         margin-right: 0%;
     }
 
-    > .subwindow.selected {
-        width: (100% / 1.6);
-    }
-
-    > .subwindow.selected#one:target { 
+    > .subwindow#one:target { 
         margin-left: 18.75%;
     }
 
-    > .subwindow.selected#four:target { 
+    > .subwindow:target { 
+        width: (100% / 1.6);
+        // -ms-transform: skewX(0deg);
+        // -webkit-transform: skewX(0deg);
+        // transform: skewX(0deg);
+
+        .masking-layer {
+            -ms-transform: skewX(0deg);
+            transform: skewX(0deg);
+            -webkit-transform: skewX(0deg);
+        }
+
+    }
+
+    > .subwindow#four:target { 
         margin-right: 18.75%;
     }
 

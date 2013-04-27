@@ -21,13 +21,13 @@ $(function() {
         e.stopPropagation();
         var $this, $right, $left, $others;
 
-        if (($this = $(this)).hasClass('selected')) {
+        if (window.location.hash && window.location.hash !== '#') {
             $('.row-fluid').removeClass('go')
-            $('.subwindow').removeClass('selected right1 right2 right3 left1 left2 left3');
+            $('.subwindow').removeClass('right1 right2 right3 left1 left2 left3');
+            window.location.hash = '';
+            e.preventDefault();
         } else {
-            $('.selected').removeClass('selected');
-            $this.addClass('selected');
-            $right = $subwindows.filter('a.selected ~ a');
+            $right = $subwindows.filter('#' + this.id + ' ~ a');
             $left = $subwindows.not($right).not(this);
             $left.addClass('left' + $left.length);
             $right.addClass('right' + $right.length);

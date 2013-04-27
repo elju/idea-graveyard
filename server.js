@@ -14,10 +14,10 @@ var app = express();
 
 // all environments
 
-var portz = (process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT);
+var portz = (5858 || process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT);
 var dirz = (process.env.OPENSHIFT_REPO_DIR || __dirname);
 
-app.set('port', portz || 8080);
+app.set('port', portz || 5858);
 app.set('views', dirz + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
