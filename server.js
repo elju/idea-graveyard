@@ -33,6 +33,6 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 
-http.createServer(app).listen(process.env.OPENSHIFT_INTERNAL_IP, app.get('port'), function(){
+app.listen(app.get('port'), process.env.OPENSHIFT_INTERNAL_IP, function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
