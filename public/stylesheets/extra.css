@@ -37,6 +37,7 @@ body {
 }
 .row-fluid > .subwindow {
   display: block;
+  overflow: hidden;
   /* -ms-transform: skewX(-45deg);
         -webkit-transform: skewX(-45deg);
         transform: skewX(-45deg); */
@@ -45,6 +46,16 @@ body {
   -o-transition: width 2s, left 2s, right 2s;
   -moz-transition: width 2s, left 2s, right 2s;
   transition: width 2s, left 2s, right 2s;
+}
+.row-fluid > .subwindow > * {
+  -ms-transform: skewX(45deg);
+  -webkit-transform: skewX(45deg);
+  transform: skewX(45deg);
+}
+.row-fluid > .subwindow .subcontainer {
+  overflow: hidden;
+  position: absolute;
+  width: 250%;
 }
 .row-fluid > .subwindow#one {
   -webkit-transition: width 2s, left 2s, right 2s, margin-left 2s;
