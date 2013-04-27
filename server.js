@@ -13,8 +13,12 @@ var express = require('express')
 var app = express();
 
 // all environments
-app.set('port', process.env.OPENSHIFT_INTERNAL_PORT || 8080);
-app.set('views', process.env.OPENSHIFT_REPO_DIR + '/views');
+
+var portz = (process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT);
+var dirz = (process.env.OPENSHIFT_REPO_DIR || __dirname);
+
+app.set('port', portz || 8080);
+app.set('views', dirz + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -22,8 +26,8 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
   app.use(require('less-middleware')({ src: process.env.OPENSHIFT_REPO_DIR + '/public' }));
-app.use(express.static(process.env.OPENSHIFT_REPO_DIR + '/public'));
-console.log(process.env.OPENSHIFT_REPO_DIR);
+app.use(express.static(dirz + '/public'));
+console.log(dirz);
 
 // development only
 if ('development' == app.get('env')) {
@@ -33,6 +37,6 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 
-app.listen(app.get('port'), process.env.OPENSHIFT_INTERNAL_IP, function(){
+app.listen(app.get('port'), (process.env.OPENSHIFT_INTERNAL_IP || '127.0.0.1'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

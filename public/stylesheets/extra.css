@@ -14,13 +14,6 @@ body {
   width: 160%;
   left: -30%;
   height: 100%;
-}
-.row-fluid > .span3 {
-  position: absolute;
-  height: 100%;
-  right: auto;
-}
-.row-fluid > .subwindow {
   -ms-transform: skewX(-45deg);
   -webkit-transform: skewX(-45deg);
   transform: skewX(-45deg);
@@ -28,18 +21,38 @@ body {
   -o-transition: width 2s, transform 2s, left 2s, right 2s;
   -moz-transition: width 2s, transform 2s, left 2s, right 2s;
   transition: width 2s, transform 2s, left 2s, right 2s;
+  /*
+    > .subwindow.otherSelected {
+        -ms-transform: skewX(0deg);
+        -webkit-transform: skewX(0deg);
+        transform: skewX(0deg);
+    }
+*/
+
+}
+.row-fluid > .span3 {
+  position: absolute;
+  height: 100%;
+  right: auto;
+}
+.row-fluid > .subwindow {
+  /* -ms-transform: skewX(-45deg);
+        -webkit-transform: skewX(-45deg);
+        transform: skewX(-45deg); */
+
+  -webkit-transition: width 2s, -webkit-transform 2s, left 2s, right 2s;
+  -o-transition: width 2s, transform 2s, left 2s, right 2s;
+  -moz-transition: width 2s, transform 2s, left 2s, right 2s;
+  transition: width 2s, transform 2s, left 2s, right 2s;
 }
 .row-fluid > .subwindow.selected {
-  -ms-transform: skewX(0deg);
-  -webkit-transform: skewX(0deg);
-  transform: skewX(0deg);
+  /*
+        -ms-transform: skewX(0deg);
+        -webkit-transform: skewX(0deg);
+        transform: skewX(0deg); */
+
   left: 18.75%;
   right: 18.75%;
-}
-.row-fluid > .subwindow.otherSelected {
-  -ms-transform: skewX(0deg);
-  -webkit-transform: skewX(0deg);
-  transform: skewX(0deg);
 }
 .row-fluid > .subwindow.left {
   left: 0%;
@@ -80,6 +93,11 @@ body {
 }
 .row-fluid > .four.clicked {
   left: -56.25%;
+}
+.row-fluid.go {
+  -ms-transform: skewX(0deg);
+  -webkit-transform: skewX(0deg);
+  transform: skewX(0deg);
 }
 .mainbar {
   background-color: rgba(255, 255, 1, 0.25);

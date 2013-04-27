@@ -16,22 +16,24 @@ $(function() {
 $(function() {
     var $subwindows;
     $subwindows = $('.subwindow');
-    $subwindows.on('click', function(e) {
+    $subwindows.on('click', function alternate (e) {
+
         e.stopPropagation();
         var $this, $right, $left, $others;
-        $this = $(this);
-        if ($this.hasClass('selected')) {
-            return;
+
+        if (($this = $(this)).hasClass('selected')) {
+            $('.row-fluid').removeClass('go')
+            $('.subwindow').removeClass('selected right left');
+        } else {
+            $('.selected').removeClass('selected');
+            $this.addClass('selected');
+            $right = $subwindows.filter('div.selected ~ div');
+            $left = $subwindows.not($right).not(this);
+            $left.addClass('left');
+            $right.addClass('right');
+            $('.row-fluid').addClass('go');
         }
-        $subwindows.removeClass('selected');
-        $this.removeClass('otherSelected').addClass('selected');
-        $right = $subwindows.filter('div.selected ~ div');
-        $left = $subwindows.not($right).not(this);
-        $others = $left.add($right);
-        $others.addClass('otherSelected');
-        $left.addClass('left');
-        $right.addClass('right');
-    });
+    } );
 });
 
 
