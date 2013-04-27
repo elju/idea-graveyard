@@ -1,0 +1,24 @@
+!!! 5
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      title
+        block title
+          = locals.name
+      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
+      link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Fredericka+the+Great')
+      link(rel='stylesheet', href='stylesheets/github.css')
+      link(rel='stylesheet', href='stylesheets/main.css')
+      link(rel='stylesheet', href='stylesheets/extra.css')
+      script(src='javascripts/jquery-2.0.0.min.js')
+      script(src='javascripts/main.js')
+  body
+    include navbar
+    div.container
+      div.row-fluid
+        div.span3.subwindow.one.main
+        div.span3.subwindow.two.main
+        div.span3.subwindow.three.main
+        div.span3.subwindow.four.main
+    div.mainbar

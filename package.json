@@ -25,11 +25,13 @@
   },
 
   "dependencies": {
-    "express": "*"
+    "express": "*",
+    "jade": "*",
+    "less-middleware": "*"
   },
   "devDependencies": {},
   "bundleDependencies": [],
 
   "private": true,
-  "main": "server.js"
+  "main": "app.js"
 }

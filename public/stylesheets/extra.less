@@ -1,0 +1,131 @@
+html{height:100%;position:relative;}
+body{height:100%;overflow:hidden;}
+
+.container {height:100%;}
+
+.row-fluid {
+    position: relative;
+    width: 160%;
+    left: -30%;
+    height: 100%;
+    > .span3 {
+        position: absolute;
+        height: 100%;
+        right: auto;
+    }
+    > .subwindow {
+        -ms-transform: skewX(-45deg);
+        -webkit-transform: skewX(-45deg);
+        transform: skewX(-45deg);
+        -webkit-transition: width 2s, -webkit-transform 2s, left 2s, right 2s;
+        -o-transition: width 2s, transform 2s, left 2s, right 2s;
+        -moz-transition: width 2s, transform 2s, left 2s, right 2s;
+        transition: width 2s, transform 2s, left 2s, right 2s;
+    }
+    > .subwindow.selected {
+        -ms-transform: skewX(0deg);
+        -webkit-transform: skewX(0deg);
+        transform: skewX(0deg);
+        left: 18.75%;
+        right: 18.75%;
+    }
+
+    > .subwindow.otherSelected {
+        -ms-transform: skewX(0deg);
+        -webkit-transform: skewX(0deg);
+        transform: skewX(0deg);
+    }
+
+    > .subwindow.left {
+        // left: 18.75%;
+        left: 0%;
+        // right: 81.25%;
+        right: 82%;
+    }
+
+    > .subwindow.right {
+        // right: 18.75%;
+        right: 0%;
+        // left: 81.25%;
+        left: 82%;
+    }
+
+    > .one {
+        background-color: rgba(0, 255, 1, 0.25);
+        left: 0%;
+        right: 75%;
+    }
+    > .one.clicked {
+        left: 18.75%;
+    }
+    > .two {
+        background-color: rgba(0, 191, 215, 0.25);
+        left: 25%;
+        right: 50%;
+    }
+    > .two.clicked {
+        left: -6.25%;
+    }
+    > .three {
+        background-color: rgba(255, 255, 1, 0.25);
+        left: 50%;
+        right: 25%;
+    }
+    > .three.clicked {
+        left: -31.25%;
+    }
+    > .four {
+        background-color: rgba(254, 0, 0, 0.25);
+        left: 75%;
+        right: 0%;
+    }
+    > .four.clicked {
+        left: -56.25%;
+    }
+}
+
+.mainbar {
+    background-color: rgba(255, 255, 1, 0.25);
+    position: absolute;
+    top: 20%;
+    left: -100%;
+    width: 100%;
+    height: 65%;
+    transition: left 2s ease-in-out;
+    -webkit-transition: left 2s ease-in-out;
+    -mox-transition: left 2s ease-in-out;
+    -o-transition: left 2s ease-in-out;
+}
+
+.mainbar.activated {
+    left: 0%;
+}
+
+.silenter {
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    left: 0;
+    right: 0;
+    .name {
+        width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        span {
+            font-size: 50px;
+            line-height: 65px;
+        }
+    }
+    .navigation {
+        color: hsl(105, 5%, 15%);
+        a {
+            color: hsl(105, 5%, 15%);
+            font-size: 30px;
+            line-height: 0px;
+            padding: 0pt 3pt;
+            text-decoration: none;
+        }
+    }
+}
