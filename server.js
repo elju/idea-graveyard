@@ -10,19 +10,20 @@ var express = require('express')
   , path = require('path')
   , fs = require('fs');
 
+var app = express();
 
 // all environments
 app.set('port', process.env.OPENSHIFT_INTERNAL_PORT || 8080);
-app.set('views', __dirname + '/views');
+app.set('views', process.env.OPENSHIFT_REPO_DIR + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
-  app.use(require('less-middleware')({ src: __dirname + '/public' }));
-app.use(express.static(__dirname + '/public'));
-console.log(__dirname);
+  app.use(require('less-middleware')({ src: process.env.OPENSHIFT_REPO_DIR + '/public' }));
+app.use(express.static(process.env.OPENSHIFT_REPO_DIR + '/public'));
+console.log(process.env.OPENSHIFT_REPO_DIR);
 
 // development only
 if ('development' == app.get('env')) {
