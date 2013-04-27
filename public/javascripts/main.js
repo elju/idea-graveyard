@@ -23,14 +23,14 @@ $(function() {
 
         if (($this = $(this)).hasClass('selected')) {
             $('.row-fluid').removeClass('go')
-            $('.subwindow').removeClass('selected right left');
+            $('.subwindow').removeClass('selected right1 right2 right3 left1 left2 left3');
         } else {
             $('.selected').removeClass('selected');
             $this.addClass('selected');
-            $right = $subwindows.filter('div.selected ~ div');
+            $right = $subwindows.filter('a.selected ~ a');
             $left = $subwindows.not($right).not(this);
-            $left.addClass('left');
-            $right.addClass('right');
+            $left.addClass('left' + $left.length);
+            $right.addClass('right' + $right.length);
             $('.row-fluid').addClass('go');
         }
     } );

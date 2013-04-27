@@ -16,26 +16,49 @@ body{height:100%;overflow:hidden;}
     -moz-transition: width 2s, transform 2s, left 2s, right 2s;
     transition: width 2s, transform 2s, left 2s, right 2s;
     > .span3 {
-        position: absolute;
         height: 100%;
-        right: auto;
+        width: 25%;
+        float: left;
     }
     > .subwindow {
+        display: block;
         /* -ms-transform: skewX(-45deg);
         -webkit-transform: skewX(-45deg);
         transform: skewX(-45deg); */
-        -webkit-transition: width 2s, -webkit-transform 2s, left 2s, right 2s;
-        -o-transition: width 2s, transform 2s, left 2s, right 2s;
-        -moz-transition: width 2s, transform 2s, left 2s, right 2s;
-        transition: width 2s, transform 2s, left 2s, right 2s;
+        -webkit-transition: width 2s, left 2s, right 2s;
+        -o-transition: width 2s, left 2s, right 2s;
+        -moz-transition: width 2s, left 2s, right 2s;
+        transition: width 2s, left 2s, right 2s;
     }
-    > .subwindow.selected { /*
-        -ms-transform: skewX(0deg);
-        -webkit-transform: skewX(0deg);
-        transform: skewX(0deg); */
-        left: 18.75%;
-        right: 18.75%;
+
+    > .subwindow#one {
+        -webkit-transition: width 2s, left 2s, right 2s, margin-left 2s;
+        -o-transition: width 2s, left 2s, right 2s, margin-left 2s;
+        -moz-transition: width 2s, left 2s, right 2s, margin-left 2s;
+        transition: width 2s, left 2s, right 2s, margin-left 2s;
+        margin-left: 0%;
     }
+
+    > .subwindow#four {
+        -webkit-transition: width 2s, left 2s, right 2s, margin-right 2s;
+        -o-transition: width 2s, left 2s, right 2s, margin-right 2s;
+        -moz-transition: width 2s, left 2s, right 2s, margin-right 2s;
+        transition: width 2s, left 2s, right 2s, margin-right 2s;
+        margin-right: 0%;
+    }
+
+    > .subwindow.selected {
+        width: (100% / 1.6);
+    }
+
+    > .subwindow.selected#one:target { 
+        margin-left: 18.75%;
+    }
+
+    > .subwindow.selected#four:target { 
+        margin-right: 18.75%;
+    }
+
 /*
     > .subwindow.otherSelected {
         -ms-transform: skewX(0deg);
@@ -44,51 +67,71 @@ body{height:100%;overflow:hidden;}
     }
 */
 
-    > .subwindow.left {
+    > .subwindow.right1, .subwindow.left1 {
+        width: 18.75%;
+    }
+
+    > .subwindow.right2, .subwindow.left2 {
+        width: 9.375%;
+    }
+
+    > .subwindow.right3, .subwindow.left3 {
+        width: 6.25%;
+    }
+
+    > .subwindow.left#one {
+        // left: 18.75%;
+        left: 0%;
+        // right: 81.25%;
+        right: 82%;
+    }
+    > .subwindow.left#two {
+        // left: 18.75%;
+        left: 0%;
+        // right: 81.25%;
+        right: 82%;
+    }
+    > .subwindow.left#three {
         // left: 18.75%;
         left: 0%;
         // right: 81.25%;
         right: 82%;
     }
 
-    > .subwindow.right {
+    > .subwindow.right#two {
+        // right: 18.75%;
+        right: 0%;
+        // left: 81.25%;
+        left: 82%;
+    }
+    > .subwindow.right#three {
+        // right: 18.75%;
+        right: 0%;
+        // left: 81.25%;
+        left: 82%;
+    }
+    > .subwindow.right#four {
         // right: 18.75%;
         right: 0%;
         // left: 81.25%;
         left: 82%;
     }
 
-    > .one {
+    > #one {
         background-color: rgba(0, 255, 1, 0.25);
-        left: 0%;
-        right: 75%;
+        // left: 0%;
     }
-    > .one.clicked {
-        left: 18.75%;
-    }
-    > .two {
+    > #two {
         background-color: rgba(0, 191, 215, 0.25);
-        left: 25%;
-        right: 50%;
+        // left: 25%;
     }
-    > .two.clicked {
-        left: -6.25%;
-    }
-    > .three {
+    > #three {
         background-color: rgba(255, 255, 1, 0.25);
-        left: 50%;
-        right: 25%;
+        // left: 50%;
     }
-    > .three.clicked {
-        left: -31.25%;
-    }
-    > .four {
+    > #four {
         background-color: rgba(254, 0, 0, 0.25);
-        left: 75%;
-        right: 0%;
-    }
-    > .four.clicked {
-        left: -56.25%;
+        // left: 75%;
     }
 }
 
