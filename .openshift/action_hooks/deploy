@@ -14,3 +14,4 @@ source "$OPENSHIFT_REPO_DIR/.openshift/lib/utils"
 #  installed.
 ensure_node_is_installed
 
+node "$OPENSHIFT_REPO_DIR/app.js"
