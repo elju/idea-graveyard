@@ -14,7 +14,7 @@ var app = express();
 
 // all environments
 
-var portz = (3000 || process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT);
+var portz = (process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT);
 var dirz = (process.env.OPENSHIFT_REPO_DIR || __dirname);
 
 app.set('port', portz || 3000);
