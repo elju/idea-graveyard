@@ -1,17 +1,21 @@
-$(function() {
-    console.time("setting up click events.");
-    $(".navbutton").each(function(i, el) {
-        that = this;
-        $(this).on('click', function(e) {
-            e.preventDefault();
-            history.pushState({}, this.id, this.href);
-            $mainbar = $('.mainbar');
-            $mainbar.hasClass('activated') ? $mainbar.removeClass('activated') : $mainbar.addClass('activated');
-            return false;
-        })
-    });
-    console.timeEnd("setting up click events.");
-});
+/*
+ *
+ * $(function() {
+ *   console.time("setting up click events.");
+ *   $(".navbutton").each(function(i, el) {
+ *       that = this;
+ *       $(this).on('click', function(e) {
+ *           e.preventDefault();
+ *           history.pushState({}, this.id, this.href);
+ *           $mainbar = $('.mainbar');
+ *           $mainbar.hasClass('activated') ? $mainbar.removeClass('activated') : $mainbar.addClass('activated');
+ *           return false;
+ *       })
+ *   });
+ *   console.timeEnd("setting up click events.");
+ * });
+
+*/
 
 $(function() {
     var $subwindows;
