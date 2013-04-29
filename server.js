@@ -1,4 +1,4 @@
-#!/bin/env node
+##!/bin/env node
 /**
  * Module dependencies.
  */
@@ -14,10 +14,10 @@ var app = express();
 
 // all environments
 
-var portz = (8080 || process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT);
+var portz = (3000 || process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT);
 var dirz = (process.env.OPENSHIFT_REPO_DIR || __dirname);
 
-app.set('port', portz || 8080);
+app.set('port', portz || 3000);
 app.set('views', dirz + '/views');
 app.set('view engine', 'jade');
 app.use(express.favicon());
