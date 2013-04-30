@@ -26,16 +26,18 @@ $(function() {
         var $this, $right, $left, $others;
 
         if (window.location.hash && window.location.hash !== '#') {
-            $('#row-fluid').removeClass('go')
+            $('#row-fluid').removeClass('go goone gotwo gothree gofour')
             $('.subwindow').removeClass('right1 right2 right3 left1 left2 left3');
             window.location.hash = '';
             e.preventDefault();
         } else {
             $right = $subwindows.filter('#' + this.id + ' ~ a');
             $left = $subwindows.not($right).not(this);
-            $left.addClass('left' + $left.length);
-            $right.addClass('right' + $right.length);
-            $('#row-fluid').addClass('go');
+            $left.each(function(i) {
+                $(this).addClass('left' + ($left.length - i));} );
+            $right.each(function(i) {
+                $(this).addClass('right' + (i + 1)); });
+            $('#row-fluid').addClass('go').addClass('go' + this.id);
         }
     } );
 });
