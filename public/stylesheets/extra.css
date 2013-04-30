@@ -103,7 +103,7 @@ body {
   transition: margin-left 2s, width 2s, transform 2s;
 }
 .subwindow img {
-  margin: 75px;
+  margin: 65px;
 }
 div #row-fluid.go .left1 > .subcontainer {
   margin-left: 100%;

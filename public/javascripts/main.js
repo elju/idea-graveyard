@@ -28,6 +28,7 @@ $(function() {
         if (window.location.hash && window.location.hash !== '#') {
             $('#row-fluid').removeClass('go goone gotwo gothree gofour')
             $('.subwindow').removeClass('right1 right2 right3 left1 left2 left3');
+            $('.subcontainer').css('overflow-y', 'inherit');
             window.location.hash = '';
             e.preventDefault();
         } else {
@@ -38,6 +39,10 @@ $(function() {
             $right.each(function(i) {
                 $(this).addClass('right' + (i + 1)); });
             $('#row-fluid').addClass('go').addClass('go' + this.id);
+            var that = this;
+            ['transitionend', 'webkitTransitionEnd', 'oTransitionEnd'].forEach(function (el, i) {
+                $(that).on(el, function() {$(this).children().css('overflow-y', 'auto');}); } );
+
         }
     } );
 });
