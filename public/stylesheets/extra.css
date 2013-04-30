@@ -15,7 +15,7 @@ body {
 }
 .subcontainer {
   position: absolute;
-  height: 100%;
+  padding: 1%;
 }
 #one .subcontainer {
   margin-left: 75%;
@@ -52,7 +52,8 @@ body {
   transition: transform 2s, margin-left 2s, width 2s;
 }
 #row-fluid.go .subwindow > .subcontainer {
-  width: 100%;
+  padding: 1%;
+  width: 98%;
   margin-left: 0%;
   -ms-transform: skewX(0deg);
   -webkit-transform: skewX(0deg);
@@ -77,16 +78,16 @@ body {
   margin-left: -300%;
 }
 #row-fluid > #one {
-  background-color: rgba(0, 255, 1, 0.25);
+  background-color: rgba(0, 255, 1, 0.15);
 }
 #row-fluid > #two {
-  background-color: rgba(0, 191, 215, 0.25);
+  background-color: rgba(0, 191, 215, 0.15);
 }
 #row-fluid > #three {
-  background-color: rgba(255, 255, 1, 0.25);
+  background-color: rgba(255, 255, 1, 0.15);
 }
 #row-fluid > #four {
-  background-color: rgba(254, 0, 0, 0.25);
+  background-color: rgba(254, 0, 0, 0.15);
 }
 .subwindow {
   overflow: hidden;
@@ -95,15 +96,15 @@ body {
   -ms-transform: skewX(45deg);
   -webkit-transform: skewX(45deg);
   transform: skewX(45deg);
-  height: 100%;
-  width: 250%;
+  height: 98%;
+  width: 248%;
   -webkit-transition: margin-left 2s, width 2s, -webkit-transform 2s;
   -o-transition: margin-left 2s, width 2s, transform 2s;
   -moz-transition: margin-left 2s, width 2s, transform 2s;
   transition: margin-left 2s, width 2s, transform 2s;
 }
 .subwindow img {
-  margin: 65px;
+  margin: 50px;
 }
 div #row-fluid.go .left1 > .subcontainer {
   margin-left: 100%;
