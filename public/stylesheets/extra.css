@@ -105,47 +105,47 @@ body {
 .subwindow img {
   margin: 75px;
 }
-div #row-fluid .left1 > .subcontainer {
+div #row-fluid.go .left1 > .subcontainer {
   margin-left: 100%;
-  -webkit-transition: -webkit-transform 1s, width, 1s, margin-left 1s;
-  -o-transition: transform 1s, margin-left 1s, width 1s;
-  -moz-transition: transform 1s, margin-left 1s, width 1s;
-  transition: transform 1s, margin-left 1s, width 1s;
+  -webkit-transition: -webkit-transform 1.75s, width, 1.75s, margin-left 1.75s;
+  -o-transition: transform 1.75s, margin-left 1.75s, width 1.75s;
+  -moz-transition: transform 1.75s, margin-left 1.75s, width 1.75s;
+  transition: transform 1.75s, margin-left 1.75s, width 1.75s;
 }
-div #row-fluid > .left2 > div {
+div #row-fluid.go > .left2 > .subcontainer {
   margin-left: 200%;
-  -webkit-transition: -webkit-transform 0.5s, width, 0.5s, margin-left 0.5s;
-  -o-transition: transform 0.5s, margin-left 0.5s, width 0.5s;
-  -moz-transition: transform 0.5s, margin-left 0.5s, width 0.5s;
-  transition: transform 0.5s, margin-left 0.5s, width 0.5s;
+  -webkit-transition: -webkit-transform 1.5s, width, 1.5s, margin-left 1.5s;
+  -o-transition: transform 1.5s, margin-left 1.5s, width 1.5s;
+  -moz-transition: transform 1.5s, margin-left 1.5s, width 1.5s;
+  transition: transform 1.5s, margin-left 1.5s, width 1.5s;
 }
-div #row-fluid > .left3 > div {
+div #row-fluid.go > .left3 > .subcontainer {
   margin-left: 300%;
-  -webkit-transition: -webkit-transform 0.25s, width, 0.25s, margin-left 0.25s;
-  -o-transition: transform 0.25s, margin-left 0.25s, width 0.25s;
-  -moz-transition: transform 0.25s, margin-left 0.25s, width 0.25s;
-  transition: transform 0.25s, margin-left 0.25s, width 0.25s;
+  -webkit-transition: -webkit-transform 1.35s, width, 1.35s, margin-left 1.35s;
+  -o-transition: transform 1.35s, margin-left 1.35s, width 1.35s;
+  -moz-transition: transform 1.35s, margin-left 1.35s, width 1.35s;
+  transition: transform 1.35s, margin-left 1.35s, width 1.35s;
 }
-div #row-fluid > .right1 > div {
+div #row-fluid.go > .right1 > .subcontainer {
   margin-left: -100%;
-  -webkit-transition: -webkit-transform 1s, width, 1s, margin-left 1s;
-  -o-transition: transform 1s, margin-left 1s, width 1s;
-  -moz-transition: transform 1s, margin-left 1s, width 1s;
-  transition: transform 1s, margin-left 1s, width 1s;
+  -webkit-transition: -webkit-transform 1.75s, width, 1.75s, margin-left 1.75s;
+  -o-transition: transform 1.75s, margin-left 1.75s, width 1.75s;
+  -moz-transition: transform 1.75s, margin-left 1.75s, width 1.75s;
+  transition: transform 1.75s, margin-left 1.75s, width 1.75s;
 }
-div #row-fluid > .right2 > div {
+div #row-fluid.go > .right2 > .subcontainer {
   margin-left: -200%;
-  -webkit-transition: -webkit-transform 0.5s, width, 0.5s, margin-left 0.5s;
-  -o-transition: transform 0.5s, margin-left 0.5s, width 0.5s;
-  -moz-transition: transform 0.5s, margin-left 0.5s, width 0.5s;
-  transition: transform 0.5s, margin-left 0.5s, width 0.5s;
+  -webkit-transition: -webkit-transform 1.5s, width, 1.5s, margin-left 1.5s;
+  -o-transition: transform 1.5s, margin-left 1.5s, width 1.5s;
+  -moz-transition: transform 1.5s, margin-left 1.5s, width 1.5s;
+  transition: transform 1.5s, margin-left 1.5s, width 1.5s;
 }
-div #row-fluid > .right3 > div {
+div #row-fluid.go > .right3 > .subcontainer {
   margin-left: -300%;
-  -webkit-transition: -webkit-transform 0.25s, width, 0.25s, margin-left 0.25s;
-  -o-transition: transform 0.25s, margin-left 0.25s, width 0.25s;
-  -moz-transition: transform 0.25s, margin-left 0.25s, width 0.25s;
-  transition: transform 0.25s, margin-left 0.25s, width 0.25s;
+  -webkit-transition: -webkit-transform 1.35s, width, 1.35s, margin-left 1.35s;
+  -o-transition: transform 1.35s, margin-left 1.35s, width 1.35s;
+  -moz-transition: transform 1.35s, margin-left 1.35s, width 1.35s;
+  transition: transform 1.35s, margin-left 1.35s, width 1.35s;
 }
 .mainbar {
   background-color: rgba(255, 255, 1, 0.25);
