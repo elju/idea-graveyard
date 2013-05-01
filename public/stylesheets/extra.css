@@ -20,38 +20,38 @@ body {
   -ms-transform-origin: left top;
   -webkit-transform-origin: left top;
   transform-origin: left top;
-  -ms-transform: skewX(45deg) translateX(30%);
-  -webkit-transform: skewX(45deg) translateX(30%);
-  transform: skewX(45deg) translateX(30%);
+  -ms-transform: skewX(45deg) translateX(10%);
+  -webkit-transform: skewX(45deg) translateX(10%);
+  transform: skewX(45deg) translateX(10%);
 }
 #two .subwindow {
   -ms-transform-origin: left top;
   -webkit-transform-origin: left top;
   transform-origin: left top;
-  -ms-transform: skewX(45deg) translateX(-10%);
-  -webkit-transform: skewX(45deg) translateX(-10%);
-  transform: skewX(45deg) translateX(-10%);
+  -ms-transform: skewX(45deg) translateX(-30%);
+  -webkit-transform: skewX(45deg) translateX(-30%);
+  transform: skewX(45deg) translateX(-30%);
 }
 #three .subwindow {
   -ms-transform-origin: left top;
   -webkit-transform-origin: left top;
   transform-origin: left top;
-  -ms-transform: skewX(45deg) translateX(-50%);
-  -webkit-transform: skewX(45deg) translateX(-50%);
-  transform: skewX(45deg) translateX(-50%);
+  -ms-transform: skewX(45deg) translateX(-70%);
+  -webkit-transform: skewX(45deg) translateX(-70%);
+  transform: skewX(45deg) translateX(-70%);
 }
 #four .subwindow {
   -ms-transform-origin: left top;
   -webkit-transform-origin: left top;
   transform-origin: left top;
-  -ms-transform: skewX(45deg) translateX(-90%);
-  -webkit-transform: skewX(45deg) translateX(-90%);
-  transform: skewX(45deg) translateX(-90%);
+  -ms-transform: skewX(45deg) translateX(-110%);
+  -webkit-transform: skewX(45deg) translateX(-110%);
+  transform: skewX(45deg) translateX(-110%);
 }
 #row-fluid {
   width: 160%;
   height: 100%;
-  margin-left: -30%;
+  margin-left: -10%;
   -ms-transform-origin: left top;
   -webkit-transform-origin: left top;
   transform-origin: left top;

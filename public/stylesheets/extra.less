@@ -1,6 +1,8 @@
 html{height:100%;position:relative;}
 body{height:100%;position:relative;overflow:hidden;}
 
+@warper-left-margin: -10%;
+
 .container {height:100%;}
 
 .transformskew(@deg) {
@@ -39,26 +41,26 @@ body{height:100%;position:relative;overflow:hidden;}
 }
 
 #one .subwindow {
-    .transformtranslate(30%, 45deg);
+    .transformtranslate((20% + @warper-left-margin), 45deg);
 }
 
 #two .subwindow {
-    .transformtranslate(-10%, 45deg);
+    .transformtranslate((-20% + @warper-left-margin), 45deg);
 }
 
 #three .subwindow {
-    .transformtranslate(-50%, 45deg);
+    .transformtranslate((-60% + @warper-left-margin), 45deg);
 }
 
 #four .subwindow {
-    .transformtranslate(-90%, 45deg);
+    .transformtranslate((-100% + @warper-left-margin), 45deg);
 }
 
 
 #row-fluid {
     width: 160%;
     height: 100%;
-    margin-left: -30%;
+    margin-left: @warper-left-margin;
     .transformskew(-45);
     -webkit-transition: -webkit-transform 2s, margin-left 2s, width 2s;
     -o-transition: transform 2s, margin-left 2s, width 2s;
