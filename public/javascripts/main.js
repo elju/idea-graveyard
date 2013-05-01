@@ -18,22 +18,22 @@
 */
 
 $(function() {
-    var $subwindows;
-    $subwindows = $('.subwindow');
-    $subwindows.on('click', function alternate (e) {
+    var $slices;
+    $slices = $('.slice');
+    $slices.on('click', function alternate (e) {
 
         e.stopPropagation();
         var $this, $right, $left, $others;
 
         if (window.location.hash && window.location.hash !== '#') {
             $('#row-fluid').removeClass('go goone gotwo gothree gofour')
-            $('.subwindow').removeClass('right1 right2 right3 left1 left2 left3');
-            $('.subcontainer').css('overflow-y', 'inherit');
+            $('.slice').removeClass('right1 right2 right3 left1 left2 left3');
+            $('.subwindow').css('overflow-y', 'inherit');
             window.location.hash = '';
             e.preventDefault();
         } else {
-            $right = $subwindows.filter('#' + this.id + ' ~ a');
-            $left = $subwindows.not($right).not(this);
+            $right = $slices.filter('#' + this.id + ' ~ a');
+            $left = $slices.not($right).not(this);
             $left.each(function(i) {
                 $(this).addClass('left' + ($left.length - i));} );
             $right.each(function(i) {

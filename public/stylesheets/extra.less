@@ -3,11 +3,24 @@ body{height:100%;position:relative;overflow:hidden;}
 
 .container {height:100%;}
 
-.transform(@deg) {
+.transformskew(@deg) {
+    -ms-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
     -ms-transform: skewX((@deg + 0deg));
     -webkit-transform: skewX((@deg + 0deg));
     transform: skewX((@deg + 0deg));
 }
+
+.transformtranslate(@amt, @deg) {
+    -ms-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -ms-transform: skewX((@deg + 0deg)) translateX((@amt + 0%));
+    -webkit-transform: skewX((@deg + 0deg)) translateX((@amt + 0%));
+    transform: skewX((@deg + 0deg)) translateX((@amt + 0%));
+}
+
 
 .transition(@sec) {
     -webkit-transition: -webkit-transform ((@sec) + 0s), width, ((@sec) + 0s), margin-left ((@sec) + 0s);
@@ -17,29 +30,28 @@ body{height:100%;position:relative;overflow:hidden;}
 }
 
 
-.subwindow {
+.slice {
     height: 100%;
 }
 
-.subcontainer {
+.subwindow {
     position: absolute;
-    padding: 1%;
 }
 
-#one .subcontainer {
-    margin-left: 75%;
+#one .subwindow {
+    .transformtranslate(30%, 45deg);
 }
 
-#two .subcontainer {
-    margin-left: -25%;
+#two .subwindow {
+    .transformtranslate(-10%, 45deg);
 }
 
-#three .subcontainer {
-    margin-left: -125%;
+#three .subwindow {
+    .transformtranslate(-50%, 45deg);
 }
 
-#four .subcontainer {
-    margin-left: -225%;
+#four .subwindow {
+    .transformtranslate(-90%, 45deg);
 }
 
 
@@ -47,12 +59,12 @@ body{height:100%;position:relative;overflow:hidden;}
     width: 160%;
     height: 100%;
     margin-left: -30%;
-    .transform(-45);
+    .transformskew(-45);
     -webkit-transition: -webkit-transform 2s, margin-left 2s, width 2s;
     -o-transition: transform 2s, margin-left 2s, width 2s;
     -moz-transition: transform 2s, margin-left 2s, width 2s;
     transition: transform 2s, margin-left 2s, width 2s;
-    > .subwindow {
+    > .slice {
         height: 100%;
         width: 25%;
         float: left;
@@ -63,17 +75,15 @@ body{height:100%;position:relative;overflow:hidden;}
         transition: transform 2s, margin-left 2s, width 2s;
     }
 
-    &.go .subwindow { 
-        > .subcontainer {
-            padding: 1%;
-            width: 98%;
-            margin-left: 0%;
-            .transform(0);
+    &.go .slice { 
+        > .subwindow {
+            width: 100%;
+            .transformskew(0);
         }
 
     }
     &.go {
-        .transform(0);
+        .transformskew(0);
         width: 400%;
     }
     &.goone {
@@ -91,30 +101,30 @@ body{height:100%;position:relative;overflow:hidden;}
 
 
     > #one {
-        background-color: rgba(0, 255, 1, 0.15);
+        background-color: rgba(0, 255, 1, 0.12);
         // left: 0%;
     }
     > #two {
-        background-color: rgba(0, 191, 215, 0.15);
+        background-color: rgba(0, 191, 215, 0.12);
         // left: 25%;
     }
     > #three {
-        background-color: rgba(255, 255, 1, 0.15);
+        background-color: rgba(255, 255, 1, 0.12);
         // left: 50%;
     }
     > #four {
-        background-color: rgba(254, 0, 0, 0.15);
+        background-color: rgba(254, 0, 0, 0.12);
         // left: 75%;
     }
 
 }
 
-.subwindow {
+.slice {
     overflow: hidden;
-    > .subcontainer {
-        .transform(45);
-        height: 98%;
-        width: 248%;
+    > .subwindow {
+        .transformskew(45);
+        height: 100%;
+        width: 250%;
         -webkit-transition: margin-left 2s, width 2s, -webkit-transform 2s;
         -o-transition: margin-left 2s, width 2s, transform 2s;
         -moz-transition: margin-left 2s, width 2s, transform 2s;
@@ -128,30 +138,30 @@ body{height:100%;position:relative;overflow:hidden;}
 
 div {
     #row-fluid.go {
-        .left1 > .subcontainer {
-            margin-left: 100%;
-            .transition(1.75s);
+        .left1 > .subwindow {
+            .transformtranslate(100%, 0deg);
+            .transition(2s);
         }
-        > .left2 > .subcontainer {
-            margin-left: 200%;
-            .transition(1.5s);
+        > .left2 > .subwindow {
+            .transformtranslate(200%, 0deg);
+            .transition(2s);
         }
-        > .left3 > .subcontainer {
-            margin-left: 300%;
-            .transition(1.35s);
+        > .left3 > .subwindow {
+            .transformtranslate(300%, 0deg);
+            .transition(2s);
         }
 
-        > .right1 > .subcontainer {
-            margin-left: -100%;
-            .transition(1.75s);
+        > .right1 > .subwindow {
+            .transformtranslate(-100%, 0deg);
+            .transition(2s);
         }
-        > .right2 > .subcontainer {
-            margin-left: -200%;
-            .transition(1.5s);
+        > .right2 > .subwindow {
+            .transformtranslate(-200%, 0deg);
+            .transition(2s);
         }
-        > .right3 > .subcontainer {
-            margin-left: -300%;
-            .transition(1.35s);
+        > .right3 > .subwindow {
+            .transformtranslate(-300%, 0deg);
+            .transition(2s);
         }
     }
 }
