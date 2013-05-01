@@ -27,11 +27,13 @@
   "dependencies": {
     "express": "*",
     "jade": "*",
-    "less-middleware": "*"
+    "less-middleware": "*",
+    "github": "0.1.8",
+    "hogan-js": "2.0.0"
   },
   "devDependencies": {},
   "bundleDependencies": [],
 
   "private": true,
-  "main": "app.js"
+  "main": "server.js"
 }

@@ -1,7 +1,4 @@
 #!/bin/env node
-/**
- * Module dependencies.
- */
 
 var express = require('express')
   , exec = require('child_process').exec
