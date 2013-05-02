@@ -16,25 +16,6 @@ var ls = exec('ls -la', function(err, stdout, stderr) {
     if (err) console.log('There was en error ' + err);
 });
 
-var listRepoNames = function listRepoNames (arr) {
-    arr.forEach(function(elt, i) {
-        console.log('Repo ' + i + ': ' + elt.name);
-    });
-};
-
-var github = new GithubAPI({
-    version: "3.0.0",
-    timeout: 5000
-});
-github.authenticate({
-    type: "oauth",
-    token: "843fcb5c469b46a4f8e0c51ce32935e0db3e3a0b"
-});
-github.repos.getAll({}, function(err, res) {
-    console.log("Here's the response! :");
-    listRepoNames(res);
-});
-
 
 
 // all environments

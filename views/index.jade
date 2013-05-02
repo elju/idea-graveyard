@@ -10,16 +10,23 @@ html(lang='en')
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Fredericka+the+Great')
       link(rel='stylesheet', href='stylesheets/github.css')
       link(rel='stylesheet', href='stylesheets/main.css')
+      link(rel='stylesheet', href='css/bootstrap.min.css')
+      link(rel='stylesheet', href='css/font-awesome.min.css')
+      link(rel='stylesheet', href='css/font-awesome-ie7.min.css')
       link(rel='stylesheet', href='stylesheets/extra.css')
       script(src='javascripts/jquery-2.0.0.min.js')
       script(src='javascripts/main.js')
   body
-    div.container
+    div.cont
       div#row-fluid
         a.slice#one(href="#onebox")
           div.subwindow
-            img(src='images/art/mediums/painting_1_medium.jpg')
-            img(src='images/art/mediums/painting_2_medium.jpg')
+            rands = [Math.floor(Math.random()*22)+1,Math.floor(Math.random()*22)+1,Math.floor(Math.random()*22)+1,Math.floor(Math.random()*22)+1]
+            each number, i in rands
+              .artwrapper
+                i.icon-arrow-up.icon-2x.arrow
+                img(src='images/art/mediums/artwork_#{number}_medium.jpg')
+                i.icon-arrow-down.icon-2x.arrow
         a.slice#two(href="#twobox")
           div.subwindow
         a.slice#three(href="#threebox")
