@@ -2,8 +2,9 @@
 SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 i=1
-for file in ./backups/*.jpg; do
-    cp -T ${file} ./artwork_${i}.jpg
+for file in ./*.jpg; do
+    mv -T ${file} ./test90/art_${i}.jpg
     i=$(expr ${i} + 1)
 done
+i=1
 IFS=$SAVEIFS

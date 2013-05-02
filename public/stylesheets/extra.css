@@ -109,16 +109,16 @@ body {
   margin-left: -300%;
 }
 #row-fluid > #one {
-  background-color: rgba(0, 255, 1, 0.45);
+  background-color: rgba(140, 140, 140, 0.65);
 }
 #row-fluid > #two {
-  background-color: rgba(0, 191, 215, 0.45);
+  background-color: rgba(0, 191, 215, 0.65);
 }
 #row-fluid > #three {
-  background-color: rgba(255, 255, 1, 0.45);
+  background-color: rgba(255, 255, 1, 0.65);
 }
 #row-fluid > #four {
-  background-color: rgba(254, 0, 0, 0.45);
+  background-color: rgba(254, 0, 0, 0.65);
 }
 .slice {
   -webkit-box-flex: 0;
