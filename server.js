@@ -11,13 +11,6 @@ var express = require('express')
 
 var app = express();
 
-var ls = exec('ls -la', function(err, stdout, stderr) {
-    console.log('Results from the ls: ' + stdout);
-    if (err) console.log('There was en error ' + err);
-});
-
-
-
 // all environments
 
 var portz = (process.env.OPENSHIFT_INTERNAL_PORT || process.env.PORT);
